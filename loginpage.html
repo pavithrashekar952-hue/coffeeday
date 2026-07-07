@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> cafe Coffee Day Registration</title>
+
+<style>
+*{
+    margin:01111;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(rgba(0,0,5,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+}
+
+.container{
+    width:380px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+.logo{
+    text-align:center;
+    color:#6F4E37;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.input-box{
+    margin-bottom:15px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6F4E37;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    background:#4E342E;
+}
+
+p{
+    text-align:center;
+    margin-top:15px;
+}
+
+a{
+    color:#6F4E37;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">☕ Coffee Day</div>
+
+<h2>Register</h2>
+
+<form id="registerForm">
+
+<div class="input-box">
+<input type="text" id="name" placeholder="Full Name" required>
+</div>
+
+<div class="input-box">
+<input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div class="input-box">
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+</div>
+
+<div class="input-box">
+<input type="password" id="password" placeholder="Password" required>
+</div>
+
+<div class="input-box">
+<input type="password" id="confirm" placeholder="Confirm Password" required>
+</div>
+
+<button type="submit">Create Account</button>
+
+<p>Already have an account? <a href="#">Login</a></p>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let password=document.getElementById("password").value;
+let confirm=document.getElementById("confirm").value;
+
+if(password!==confirm){
+alert("Passwords do not match!");
+return;
+}
+
+alert("Registration Successful!");
+
+this.reset();
+
+});
+</script>
+
+</body>
+</html>
